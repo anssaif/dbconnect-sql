@@ -1,0 +1,17 @@
+{
+  "name": "my-sql-crud-app",
+  "version": "1.0.0",
+  "description": "A simple CRUD application with SQL database",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5",
+    "tedious": "^18.6.1"
+  }
+}
