@@ -22,20 +22,33 @@ my-sql-crud-app
 ## Setup Instructions
 
 1. **Clone the repository:**
+
    ```
    git clone https://github.com/yourusername/my-sql-crud-app.git
    cd my-sql-crud-app
    ```
 
 2. **Install dependencies:**
+
    ```
    npm install
    ```
 
 3. **Configure environment variables:**
    Create a `.env` file in the root directory and add your database connection string and other necessary variables:
+
    ```
-   DATABASE_URL=your_database_connection_string
+   DB_CONNECTION_STRING=jdbc:sqlserver://yoururl.com:1433
+   DB_USER=xxx
+   DB_PASSWORD=xxx
+   DB_NAME=xxx
+   DB_HOST=xx
+   DB_PORT=1433
+   DB_TRUST_SERVER_CERTIFICATE=false
+   DB_AUTHENTICATION=SqlPassword
+   DB_ENCRYPT=false
+   API_KEY=yourAPIkey
+   PORT=port
    ```
 
 4. **Run the application:**
@@ -55,21 +68,25 @@ The application provides the following CRUD operations:
 ## Examples
 
 ### Create Item
+
 ```bash
 curl -X POST http://localhost:3000/api/items -d '{"name": "Item Name"}' -H "Content-Type: application/json"
 ```
 
 ### Read Item
+
 ```bash
 curl http://localhost:3000/api/items/1
 ```
 
 ### Update Item
+
 ```bash
 curl -X PUT http://localhost:3000/api/items/1 -d '{"name": "Updated Item Name"}' -H "Content-Type: application/json"
 ```
 
 ### Delete Item
+
 ```bash
 curl -X DELETE http://localhost:3000/api/items/1
 ```
